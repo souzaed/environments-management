@@ -20,58 +20,46 @@
 - Firstly understand how customers use our environments & identify under utilised resources i.e. low traffic due to closed projects e.g Unmapped VE’s were identified & decommissioned for EPD
 
 ## Improve Resource Utilisation
+
 - Delete unused/detached EBS volumes, snapshots, unused EC2 (automated instance utilisation monitoring)
 - Use Modern instance family based on AWS recommendations (AWS trusted advisor)
 - EBS volumes - gp2 to gp3
 - Instance right sizing based on CPU & memory utilisation 10% < or >80 %
-- Cost Optimisation Initiative - FinOps
-- CDE Environments List
+
 
 ## FinOps Capability Uplift :
 
-- Dedicated FinOps squad to discover , track and implement cost optimisation opportunities  (weekly meetings)
+- Form a Dedicated FinOps squad to discover , track and implement cost optimisation opportunities  (weekly meetings)
 - Process to feed Opportunities identified by FinOps squad into each sprint and actioned based on cost savings
 - Train Devs on FinOps , and improve adoption of FinOps best practice
-- Share nodes within same VE for development/testing purposes instead of reserving full VE environment per Dev
+- Share nodes/applications within same environment for development/testing purposes instead of reserving full environment for each developer
 - Automated shutdown of dev VE’s after business hours
 - Improve discipline amongst devs to release environments before planned leave
-- Weekly FinOps meeting (Fridays) with IM to monitor and track costs related to development activities to identify & rectify any surges 
-- Work with each VE owner to build awareness of their cost trends and work with them to optimise their VE nodes & schedules and provide them with monthly cost reports
+- Weekly FinOps meeting (Fridays) for Devs with IM to monitor and track costs related to development activities to identify & rectify any surges 
+- Work with each environments consumers/owner to build awareness of their cost trends and work with them to optimise their VE nodes & schedules and provide them with monthly cost reports
 - Work with multiple environment owners to encourage sharing of different nodes in same environment to reduce on mgmt costs of creating new VE with few nodes
-- Separate FinOps initiative run to optimise/uplift FinOps for large programs like EPD
 
 ## Automation:
 
 - Automated tagging , ensure all resources are tagged including logs , volumes, ami’s , networking services
 - Automation to start/stop environments on schedule ( custom timings available to cater for different customer’s needs)
-- Automated mechanism to update VE status, WRK and ownership on confluence so that customers can easily access info (without requiring access or knowledge on AWS )
-- Service Now Form to make it easier for customers to request VE's
-- Options available to spin up half VE, and create custom VE with apps of your choice (to avoid creating Full VE of 50+ nodes)
-- Terms and Conditions to communicate terms of usage, shared responsibility model, VE rate card to help understand cost of VE's upfront, chargeback model before request
-- Form to change VE schedules i.e. from 24*7 to business hours etc
+- Automated mechanism to update environment status, WRK and ownership on confluence so that customers can easily access info (without requiring access or knowledge on AWS )
+- Service Now Form to make it easier for customers to request environment
+- Provide Options to customers to create custom environments with apps of their choice (to avoid creating Full environment of 50+ nodes, avoid wastage)
+- Create Terms and Conditions to communicate terms of usage, shared responsibility model, VE rate card to help understand cost of environments upfront, chargeback model before request
+- Make it easy for customers to request change to environment schedules i.e. change from 24*7 to business hours etc
 
 ## Reporting & Dashboards:
 - FinOps Lead to create monthly AWS reporting based on
-- Monthly Account level costs
-- Monthly costs for our team/WRK/CC (Development costs) 
-- Top 5 spending projects /VE owners trend
-- Top AWS Service Usage trends
+    - Monthly Account level costs
+    - Monthly costs for our team/WRK/CC (Development costs) 
+    - Top spending projects /environment owners trend
+    - Top AWS Service Usage trends
 - Share the reportings/dashboards with
-- Development Team to help them understand impact of DevOps practices on monthly costs
-- Cloud FinOps Monthly AWS forum
-- Past Presentations:
-- Cloud FinOps Aug 22
-- Cloud FinOps Nov 22
-- EPD VE Rationalisation Jan23
-- EPD VE&FE Rationalisation & Standards
+    - Development Team to help them understand impact of DevOps practices on monthly costs
+- Build awarness by attending Cloud FinOps Monthly AWS forum, and learn from other platform's optmisation techniques
 
-## IAG Cloud FinOps Committee:
-- Identified gap with CloudFoundations chargeback model , i.e. until FY23 CF were not sharing the Savings Plan benefit with other child AWS accounts
-- Worked with Cloud SteerCo and Finance/Commercial teams to address this, and from FY24 new chargeback model will be implemented to share out the Savings Plan benefit
-- Actively contributing Procurement , in finalising PPA for next 3 years (estimated upto additional 10% yearly savings)
-- Assisting PCBC with their 3 year forecast to help with PPA
-- Extending learnings from ADE platform FinOps work with other platforms, to help with savings for IAG's AWS spend
-- Actively helping Slalom & Procurement to setup uniform Governance and tools across all our Cloud usage
+
 
 # User Story
 
